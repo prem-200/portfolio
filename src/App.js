@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from './Portfolio/nav'; 
+import Home from './Portfolio/home';
+import About from './Portfolio/about';
+import Contact from './Portfolio/contact';
+import Skill from './Portfolio/skill';
+import Footer from './Portfolio/footer';
+import Certificate from './Portfolio/Certificate';
+import ProjectCard from './Portfolio/project';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar /> {/* Navbar with anchor links */}
+      
+      <section id="home">
+        <Home /> {/* Home section */}
+      </section>
+      
+      <section id="about">
+        <About /> {/* About section */}
+      </section>
+      
+      <section id="skills">
+        <Skill /> {/* Skills section */}
+      </section>
+      
+      <section id="projects">
+        <ProjectCard /> {/* Projects section */}
+      </section>
+      
+      <section id="certificates">
+        <Certificate /> {/* Certificates section */}
+      </section>
+      
+      <section id="contact">
+        <Contact /> {/* Contact section */}
+      </section>
+      
+      <Footer /> {/* Footer */}
     </div>
   );
 }

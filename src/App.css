@@ -1,38 +1,455 @@
-.App {
-  text-align: center;
-}
+/* Import Poppins font if not using <link> in index.html */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Set the default font family for the entire app */
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    margin: 0;  /* Add this */
+    padding: 0;
+    box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Flex container for cards */
+.project-card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Individual project card styles */
+.project-card {
+  margin: 15px;
+  width: 420px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card title styling */
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Card description styling */
+.project-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Button group spacing */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Button hover effect */
+.hover-btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hover-btn:hover {
+  background-color: #0069d9;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Gradient Background for the Header */
+.gradient-bg {
+    background: linear-gradient(135deg, #047bfa, #53c6e6 ,#2b383c); /* Gradient from blue to light blue */
+    padding: 50px; /* Adjust padding for more spacing */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Profile Image Styles */
+.profile-image {
+    width: 400px;  /* Adjust the image width */
+    height: 400px; /* Adjust the image height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border: 10px solid #fff; /* White border */
+    transition: transform 0.5s ease, border-color 0.6s ease; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Add some space at the top */
+}
+
+/* Hover Effect */
+.profile-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    border-color: #d2d8df; /* Change border color on hover */
+}
+.projectbody:hover,.project-title:hover,.project-description:hover{
+  background-color: #88b6ea;
+  color: white;
+}
+/* Text Hover Effects */
+
+
+
+
+/* Button Hover Effects */
+.btn:hover {
+    background-color: #cdd8dc; /* Change background color on hover */
+    color: #120b0b; /* Change text color on hover */
+    transition: background-color 0.5s ease, color 0.3s ease; /* Smooth transition */
+    border: 1px solid black;
+}
+
+/* Text Container Styles */
+.text-container {
+    flex: 1; /* Allow this section to grow */
+}
+
+/* Header Text Styles */
+h1 {
+    font-size: 3rem; /* Adjust size for the main header */
+    font-weight: 700; /* Use bold weight */
+}
+
+p.lead {
+    font-size: 1.5rem; /* Adjust size for the sub-header */
+    font-weight: 400; /* Regular weight */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem; /* Slightly larger brand font size */
+    color: #343a40; /* Dark color for the brand */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.navbar-brand:hover {
+    color: #007bff; /* Change brand color on hover */
+}
+
+.navbar-nav .nav-link {
+    color: #343a40; /* Dark color for nav links */
+    font-size: 1rem; /* Regular font size */
+    padding: 0.5rem 1rem; /* Consistent padding */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Background color change on hover */
+.navbar-nav .nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+    color: #007bff; /* Change link color on hover */
+    border-radius: 20px;
+}
+
+/* Active link styling */
+.navbar-nav .nav-link.active {
+    font-weight: bold; /* Bold font for active link */
+    color: #007bff; /* Color for active link */
+}
+
+/* Change span color on hover */
+.navbar-nav .nav-link:hover span {
+    color: #007bff; /* Change to your desired hover color */
+}
+
+
+/* Skills Section Styles */
+/* Skills Section Styles */
+/* Skills Section Styles */
+.skills-section {
+  background-color: #f8f9fa; /* Light background for better contrast */
+  padding: 60px 0; /* Add vertical padding */
+}
+
+.skills-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between skill items */
+}
+
+.skill-box {
+  background: #ffffff; /* Set a background color */
+  border-radius: 1.2rem; /* Rounded corners */
+  padding: 50px; /* Increased padding for larger box */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center align text */
+  transition: transform 0.3s, background-color 0.3s; /* Smooth scaling and color change on hover */
+  flex: 1; /* Allow it to grow and take space */
+  max-width: 250px; /* Set a maximum width */
+  margin-left: 10%; /* Space between skill boxes */
+}
+
+.skill-box:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+  background-color: #2f8bed; /* Change background color on hover */
+  color: #ffffff; /* Change text color to white on hover */
+}
+
+.skill-icon {
+  font-size: 4rem; /* Adjust icon size */
+  margin-bottom: 10px; /* Space below the icon */
+}
+
+/* Progress bar styles */
+.progress-bar {
+  background-color: #e9ecef; /* Background for progress bar */
+  border-radius: 1rem; /* Rounded corners for progress bar */
+  overflow: hidden; /* Clip overflow to maintain shape */
+  width: 100%; /* Make the progress bar take the full width of the box */
+  height: 1rem; /* Increase the height of the progress bar */
+}
+
+.progress {
+  height: 100%; /* Make the progress fill the height of the bar */
+  border-radius: 1rem; /* Rounded corners for the progress fill */
+  background-color: #02c9fa; /* Progress bar color */
+}
+/* Contact Section Styles */
+#contact {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 60px 0; /* Add vertical padding */
+    border-radius: 10px; /* Optional: Add rounded corners */
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Card Styles */
+.contact-card {
+  border-radius: 1rem; /* Rounded corners for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: white; /* Card background color */
+}
+
+.contact-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  background-color: #007bff; /* Change background color on hover */
+  color: white; /* Change text color to white on hover */
+}
+
+/* Card Title and Text Styling */
+.card-title {
+  font-weight: bold; /* Bold title */
+  color: #000000; /* Primary color */
+}
+
+.card-text a {
+  color: #000000; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.card-text a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Icon Styling */
+.contact-icon {
+  color: #8f9499; /* Icon color */
+}
+
+/* Change icon color on hover */
+.contact-icon:hover {
+  color: white; /* Change icon color to white on hover */
+}
+
+  #certificates {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#certificates h2 {
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#certificates .certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Even spacing */
+    gap: 20px; /* Space between the certificate cards */
+}
+
+#certificates .certificate-card {
+    flex: 1 1 calc(33% - 20px); /* Three certificates per row */
+    max-width: calc(33% - 20px); /* Three certificates per row */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    border: 2px solid #ddd; /* Add a light gray border */
+    border-radius: 8px; /* Match the border radius of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+#certificates .certificate-card:hover {
+    transform: scale(1.05);
+    border-color: #007bff; /* Change border color on hover */
+}
+
+#certificates img {
+    width: 100%;
+    height: 400px; /* Set the height for larger image display */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#certificates .certificate-card:hover img {
+    opacity: 0.9;
+    transform: scale(1.38);
+}
+
+#certificates .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#certificates .certificate-card:hover .img-overlay {
+    opacity: 1;
+}
+/* Custom styles for consistent heading appearance */
+.my-heading {
+  font-family: 'Poppins', sans-serif; /* Use a consistent font */
+  font-size: 3.0rem; /* Set a specific font size */
+  font-weight: 600; /* Adjust font weight */
+  color: #08090b; /* Set a consistent color */
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+  /* Responsive Design Adjustments */
+  @media (max-width: 576px) {
+    .row {
+      flex-direction: column; /* Stack columns on small screens */
+      align-items: center; /* Center items */
+    }
+  }
+  
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Smaller font size for tablets */
+        padding: 0.4rem 0.8rem; /* Adjust padding */
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem; /* Adjust brand size for tablets */
+    }
+
+    .profile-image {
+        width: 250px; /* Smaller image size for tablets */
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Smaller header for tablets */
+    }
+
+    p.lead {
+        font-size: 1.25rem; /* Smaller sub-header for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 0.8rem; /* Smaller font size for mobile */
+        padding: 0.3rem 0.6rem; /* Adjust padding */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem; /* Adjust brand size for mobile */
+    }
+
+    .profile-image {
+        width: 240px; /* Smaller image size for mobile */
+        height: 240px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller header for mobile */
+    }
+
+    p.lead {
+        font-size: 1rem; /* Smaller sub-header for mobile */
+    }
+    #certificates .certificate-card {
+      flex: 1 1 calc(50% - 20px); /* Two certificates per row */
+      max-width: calc(50% - 20px); /* Two certificates per row */
+  }
+
+  #certificates img {
+      height: 300px; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Reduce navbar padding for extra small screens */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.2rem 0.4rem; /* Further adjust padding for small screens */
+        text-align: center; /* Center align text */
+        display: block; /* Stack nav links vertically */
+    }
+
+    .profile-image {
+        width: 230px; /* Increase image size for extra small screens */
+        height: 230px; /* Maintain aspect ratio */
+        margin: 20px auto; /* Center image and add margin */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller header for extra small screens */
+    }
+
+    p.lead {
+        font-size: 0.875rem; /* Smaller sub-header for extra small screens */
+    }
+
+    #certificates .certificate-card {
+      flex: 1 1 100%; /* One certificate per row */
+      max-width: 100%; /* One certificate per row */
+  }
+
+  #certificates img {
+      height: 300px; /* Adjust image height for mobile screens */
+  }
+
+  #certificates h2 {
+      font-size: 1.5rem; /* Smaller font size for headings */
   }
 }
