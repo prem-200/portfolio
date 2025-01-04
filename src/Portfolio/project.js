@@ -7,8 +7,11 @@ import '../App.css'; // Import custom styles
 function ProjectCard({ image, title, description, demoLink, repoLink }) {
   return (
     <>
-   <h1 class="text-center my-heading bg-info m-5 rounded-3">Project</h1>
+    <div className="container">
 
+   <h1 class="text-center my-heading bg-info  rounded-3">Project</h1>
+   </div>
+   
 
     <div className="project-card-container">
       <Card className="project-card shadow-sm hover-effect">

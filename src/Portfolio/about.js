@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 function About() {
+    // Initialize AOS when the component mounts
+    useEffect(() => {
+        AOS.init({
+            duration: 1200, // Duration of animations (1200ms)
+            easing: 'ease-out-back', // Animation easing for a smoother effect
+            once: true, // Animation triggers only once
+            offset: 200, // Animation starts when the element is 200px from the viewport
+        });
+    }, []);
+
     return (
         <div className="container mt-5 p-5 shadow-lg rounded">
-         <h1 className="text-center mb-5 my-heading bg-info rounded-3">About Me</h1>
+            {/* Title Section */}
+            <h1 className="text-center mb-5 my-heading bg-info rounded-3" data-aos="fade-down" data-aos-delay="100">
+                About Me
+            </h1>
 
-            
-            {/* Centered <p> tag */}
-            <p className="text-center">
+            {/* Introductory Paragraph */}
+            <p className="text-center" data-aos="fade-up" data-aos-delay="200">
                 Passionate about full-stack development with a solid foundation in front-end and back-end technologies. Skilled in HTML, CSS, MediaQuery, Bootstrap, JavaScript, and ReactJS. Eager to work as a team and create advanced web applications that push the boundaries of innovation.
             </p>
-            
-            <div className="table-responsive">
+
+            {/* Personal Information Table */}
+            <div className="table-responsive" data-aos="flip-left" data-aos-delay="300">
                 <table className="table table-hover table-bordered text-center">
                     <thead className="thead-light">
                         <tr>
@@ -46,7 +60,8 @@ function About() {
                 </table>
             </div>
 
-            <div className="mt-5 table-responsive">
+            {/* Graduation Information Table */}
+            <div className="mt-5 table-responsive" data-aos="zoom-in" data-aos-delay="400">
                 <table className="table table-hover table-bordered text-center">
                     <thead className="thead-dark">
                         <tr>

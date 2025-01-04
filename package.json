@@ -2,7 +2,6 @@
 
   "homepage": "https://prem-200.github.io/portfolio",
 
-
   "name": "my-new-react-app",
 
   "version": "0.1.0",
@@ -16,6 +15,8 @@
     "@testing-library/react": "^13.4.0",
 
     "@testing-library/user-event": "^13.5.0",
+
+    "aos": "^2.3.4",
 
     "bootstrap": "^5.3.3",
 

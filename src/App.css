@@ -181,17 +181,22 @@ p.lead {
   padding: 50px; /* Increased padding for larger box */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center; /* Center align text */
-  transition: transform 0.3s, background-color 0.3s; /* Smooth scaling and color change on hover */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
   flex: 1; /* Allow it to grow and take space */
   max-width: 250px; /* Set a maximum width */
   margin-left: 10%; /* Space between skill boxes */
 }
 
+.skill-box {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
 .skill-box:hover {
   transform: scale(1.05); /* Slightly increase size on hover */
-  background-color: #2f8bed; /* Change background color on hover */
+  background: linear-gradient(135deg, #02c9fa, #718690); /* Blue gradient background on hover */
   color: #ffffff; /* Change text color to white on hover */
 }
+
 
 .skill-icon {
   font-size: 4rem; /* Adjust icon size */
@@ -215,7 +220,6 @@ p.lead {
 /* Contact Section Styles */
 #contact {
     background-color: #f8f9fa; /* Light background for contrast */
-    padding: 60px 0; /* Add vertical padding */
     border-radius: 10px; /* Optional: Add rounded corners */
   }
   
@@ -262,7 +266,6 @@ p.lead {
 
   #certificates {
     background-color: #f8f9fa;
-    padding: 60px 0;
 }
 
 #certificates h2 {
@@ -349,13 +352,147 @@ p.lead {
   font-size: 14px;
 }
 
+.contact-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  color: #007bff;
+}
+
+.contact-title {
+  font-size: 1.25rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.contact-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-text a:hover {
+  text-decoration: underline;
+}
+
+.contact-card i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+
   /* Responsive Design Adjustments */
-  @media (max-width: 576px) {
-    .row {
-      flex-direction: column; /* Stack columns on small screens */
-      align-items: center; /* Center items */
+ /* Media Query for Contact Section (max-width: 576px) */
+@media (max-width: 576px) {
+  /* Row layout adjustments */
+  .row {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    gap: 20px; /* Add space between stacked items */
+    padding: 0 15px; /* Keep consistent padding */
+  }
+
+  /* Contact Card Styles */
+  .contact-card {
+    width: 90%; /* Take most of the screen width */
+    max-width: 400px; /* Limit width for consistent design */
+    margin: 10px auto; /* Center each card with spacing */
+    padding: 25px; /* Adequate padding for content */
+    border-radius: 10px; /* Smooth rounded corners */
+    background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Subtle gradient background */
+    border: 1px solid #e0e0e0; /* Light border for definition */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Softer shadow effect */
+    text-align: center; /* Center-align text and icons */
+  }
+
+  /* Icon Design */
+  .contact-card i {
+    font-size: 2.5rem; /* Reduced size for a balanced look */
+    color: #007bff; /* Accent color for icons */
+    margin-bottom: 10px; /* Space between icon and text */
+  }
+
+  /* Heading inside contact card */
+  .contact-card h5 {
+    font-size: 1.4rem; /* Adjust heading size */
+    font-weight: bold; /* Make it stand out */
+    color: #333; /* Neutral text color */
+    margin-bottom: 8px; /* Reduce spacing */
+  }
+
+  /* Links inside contact card */
+  .contact-card a {
+    font-size: 1rem; /* Uniform link size */
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underlines */
+    font-weight: 500; /* Slightly bold */
+    transition: all 0.2s ease-in-out; /* Smooth transition */
+  }
+
+  .contact-card a:hover {
+    color: #0056b3; /* Darker blue for hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+
+  /* Paragraph inside contact card */
+  .contact-card p {
+    font-size: 0.95rem; /* Compact font for content */
+    color: #555; /* Neutral gray for readability */
+    margin-top: 5px; /* Minimal spacing */
+  }
+
+  /* Section Heading */
+  .my-heading {
+    font-size: 1.8rem; /* Reduce font for smaller screens */
+    font-weight: bold; /* Bold for emphasis */
+    color: #ffffff; /* White text for contrast */
+    background-color: #007bff; /* Brand color */
+    padding: 12px 20px; /* Compact padding */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: center;
+    margin-bottom: 20px; /* Smaller gap below heading */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  }
+
+  /* Container adjustments */
+  .container {
+    padding: 0; /* Remove default padding */
+  }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center the rows */
+    }
+  
+    .skill-box {
+      flex: 0 0 48%; /* Each box takes approximately 48% of the row */
+      margin: 1%; /* Add small spacing between cards */
+      text-align: center; /* Center the text */
+    }
+  
+    .skill-icon {
+      font-size: 2.5rem; /* Reduce icon size for better fit */
+    }
+  
+    .progress-bar {
+      width: 90%; /* Ensure progress bar adjusts within smaller cards */
     }
   }
+  
+
   
 
 /* Media Queries for Responsive Design */
@@ -451,5 +588,115 @@ p.lead {
 
   #certificates h2 {
       font-size: 1.5rem; /* Smaller font size for headings */
+  }
+}
+/* Default styles for larger screens */
+.contact-logo {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  color: #007bff;
+  font-size: 3rem;
+}
+
+.contact-title {
+  font-size: 1.25rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.contact-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-text a:hover {
+  text-decoration: underline;
+}
+
+.contact-card i {
+  margin-bottom: 10px;
+}
+
+/* Media Queries for smaller devices */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .contact-logo {
+    max-width: 120px;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+
+  .contact-icon {
+    font-size: 2.5rem;
+  }
+
+  .contact-title {
+    font-size: 1.1rem;
+  }
+
+  /* Display icon and title in one line */
+  .contact-card {
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .contact-card i {
+    margin-right: 15px; /* Space between icon and text */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .contact-logo {
+    max-width: 100px;
+  }
+
+  .contact-card {
+    padding: 10px;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+  }
+
+  .contact-title {
+    font-size: 1rem;
+  }
+
+  /* Display icon and title in one line */
+  .contact-card {
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-card i {
+    margin-right: 10px; /* Space between icon and text */
   }
 }
