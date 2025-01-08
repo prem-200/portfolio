@@ -234,7 +234,8 @@ p.lead {
 .contact-card:hover {
   transform: translateY(-10px); /* Lift effect on hover */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-  background-color: #007bff; /* Change background color on hover */
+  background-color: 3
+  #64ddfb; /* Change background color on hover */
   color: white; /* Change text color to white on hover */
 }
 
@@ -251,7 +252,7 @@ p.lead {
 
 .card-text a:hover {
   text-decoration: underline; /* Underline on hover */
-  color: #0056b3; /* Darker blue on hover */
+  color: #17c9f6; /* Darker blue on hover */
 }
 
 /* Icon Styling */
@@ -370,7 +371,7 @@ p.lead {
 }
 
 .contact-icon {
-  color: #007bff;
+  color: #ff0022;
 }
 
 .contact-title {
@@ -380,7 +381,7 @@ p.lead {
 }
 
 .contact-text a {
-  color: #007bff;
+  color: #ff0088;
   text-decoration: none;
 }
 
@@ -442,10 +443,7 @@ p.lead {
     transition: all 0.2s ease-in-out; /* Smooth transition */
   }
 
-  .contact-card a:hover {
-    color: #0056b3; /* Darker blue for hover */
-    text-decoration: underline; /* Underline on hover */
-  }
+
 
   /* Paragraph inside contact card */
   .contact-card p {

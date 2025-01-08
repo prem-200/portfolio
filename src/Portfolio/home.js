@@ -9,7 +9,7 @@ function Home() {
         <div className="text-container text-center text-md-start">
           <h1 className="display-3 text-white">HELLO! THIS IS PREM</h1>
           <p className="lead display-6 text-white">FULL-STACK Developer</p>
-          <a href="/Prem_resume.pdf" download="Prem_resume.pdf" className="btn btn-light mb-3 mb-md-0">
+          <a href="../prem.pdf" download="Prem.pdf" className="btn btn-light mb-3 mb-md-0">
             Download CV
           </a>
         </div>
