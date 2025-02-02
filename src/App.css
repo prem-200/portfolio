@@ -541,6 +541,7 @@ p.lead {
         font-size: 1rem; /* Smaller sub-header for mobile */
     }
     #certificates .certificate-card {
+      margin: 20px;
       flex: 1 1 calc(50% - 20px); /* Two certificates per row */
       max-width: calc(50% - 20px); /* Two certificates per row */
   }
@@ -696,5 +697,385 @@ p.lead {
 
   .contact-card i {
     margin-right: 10px; /* Space between icon and text */
+  }
+}
+
+
+/* App.css */
+
+/* Default styles for the container */
+.container {
+  padding: 2rem;
+  margin: 2rem auto;
+}
+
+/* For screens smaller than 768px (tablet and mobile) */
+@media (max-width: 768px) {
+  .container {
+      padding: 1rem;
+  }
+
+  .my-heading {
+      font-size: 1.5rem;
+  }
+
+  .table {
+      font-size: 0.9rem;
+  }
+}
+
+/* For screens smaller than 576px (mobile devices) */
+@media (max-width: 576px) {
+  .container {
+      padding: 0.5rem;
+  }
+
+  .my-heading {
+      font-size: 1.2rem;
+  }
+
+  .table th,
+  .table td {
+      font-size: 0.8rem;
+  }
+
+  .table-header {
+      font-size: 1rem;
+  }
+}
+/* App.css */
+
+/* Carousel image styling */
+.project-slide-image {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Caption styles */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    bottom: 10%; /* Adjust positioning */
+    color: #fff;
+}
+
+/* Project title */
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Project description */
+.project-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption {
+        padding: 0.8rem;
+    }
+}
+
+/* For mobile devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+    }
+
+    .carousel-caption {
+        padding: 0.6rem;
+    }
+}
+/* App.css */
+/* Section styling */
+#certificates {
+  background-color: #f8f9fa;
+}
+
+/* Heading Styling */
+.my-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #17a2b8;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+/* Certificate Container */
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Certificate Card */
+.certificate-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Full size Image */
+.full-size-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effects */
+.certificate-card:hover .full-size-image {
+  transform: scale(1.05);
+}
+
+/* Overlay Text on Images */
+.img-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show overlay text on hover */
+.certificate-card:hover .img-overlay {
+  opacity: 1;
+}
+
+/* Custom Arrow Color with Enhanced Design */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Set arrow color to black */
+  border-radius: 50%; /* Make the arrows rounded */
+  width: 40px; /* Increase the size of the arrows */
+  height: 40px; /* Ensure the size remains proportional */
+  background-size: 60%; /* Scale the arrow icon inside the button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover and transition effects */
+}
+
+
+
+
+/* Optional: Hover effect for carousel arrows */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .certificate-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .my-heading {
+    font-size: 2rem;
+  }
+
+  .full-size-image {
+    max-height: 300px;
+  }
+}
+
+/* Example for devices with screen width of 563px or smaller */
+@media (max-width: 563px) {
+  /* Add your custom styles here */
+  .your-class-name {
+    font-size: 16px;  /* Example: Changing font size */
+    padding: 10px;    /* Example: Adjusting padding */
+  }
+
+  /* Example for adjusting the carousel image size */
+  .carousel-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Example for adjusting the heading size */
+  .my-heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 6rem 0;
+  background-color: #f8f9fa;
+}
+
+.my-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #02c9fa; 
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for Contact Cards */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Styling for each Contact Card */
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: #0056b3;
+}
+
+h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.contact-link {
+  font-size: 1.1rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #0056b3;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .my-heading {
+    font-size: 2.5rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-icon {
+    font-size: 2.5rem;
+  }
+}
+/* Media Query for 564px device width */
+@media (max-width: 564px) {
+  .my-heading {
+    font-size: 1.8rem; /* Smaller heading size */
+    margin-bottom: 1.5rem; /* Reduced bottom margin */
+  }
+
+  /* Adjust the layout for the contact cards */
+  .contact-cards {
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap: 1rem; /* Reduced gap between cards */
+  }
+
+  .contact-card {
+    padding: 1rem; /* Reduced padding inside cards */
+    font-size: 0.9rem; /* Slightly smaller text inside the card */
+  }
+
+  .contact-icon {
+    font-size: 2rem; /* Reduced icon size */
+  }
+
+  h5 {
+    font-size: 1.1rem; /* Smaller heading text in card */
+    margin-top: 0.5rem; /* Reduced space between icon and heading */
+  }
+
+  .contact-link {
+    font-size: 0.9rem; /* Smaller link text */
+  }
+
+  /* Adjust paragraph style for small screens */
+  p {
+    font-size: 0.8rem; /* Smaller font size for paragraph text */
+    margin-top: 0.2rem; /* Reduced margin */
+    text-align: center; /* Keep text centered */
+  }
+
+  /* Style for the links inside the paragraph */
+  .contact-card p a {
+    font-size: 0.9rem; /* Adjust link size */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+  }
+
+  .contact-card p a:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+
+  /* Add some responsiveness to the contact section */
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align everything to the center */
+    justify-content: center;
   }
 }

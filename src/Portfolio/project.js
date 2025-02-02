@@ -1,56 +1,46 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import projectimg from '../project1.jpg';
+import { Carousel } from 'react-bootstrap';
+import projectimg1 from '../project1.jpg';
 import projectimg2 from '../project2.jpg';
 import '../App.css'; // Import custom styles
 
-function ProjectCard({ image, title, description, demoLink, repoLink }) {
+function ProjectCard() {
+  const projects = [
+    {
+      image: projectimg1,
+      title: 'Multilingual Sentiment Analysis for YouTube Educational Videos',
+      description:
+        'This project presents a comprehensive study on sentiment analysis for YouTube educational videos, leveraging the power of Natural Language Processing (NLP) and Machine Learning approaches...',
+    },
+    {
+      image: projectimg2,
+      title: 'Comprehensive Strategies for Detecting Malware on Websites',
+      description:
+        'This project explores the latest approaches and tools for detecting malware in websites. It covers various techniques to identify and neutralize threats in real-time...',
+    },
+  ];
+
   return (
-    <>
-    <div className="container">
-
-   <h1 class="text-center my-heading bg-info  rounded-3">Project</h1>
-   </div>
-   
-
-    <div className="project-card-container">
-      <Card className="project-card shadow-sm hover-effect">
-        <Card.Img variant="top" src={projectimg} alt={title} className="project-image" />
-        <Card.Body className='projectbody'>
-          <Card.Title className="project-title">MULTILINGUAL SENTIMENT ANALYSIS FOR YOUTUBE EDUCATIONAL VIDEOS USING NLP AND MACHINE LEARNING APPROACH</Card.Title>
-          <Card.Text className="project-description">
-          This project presents a comprehensive study on sentiment analysis for YouTube educational videos, leveraging the power of Natural Language Processing (NLP) and Machine Learning approaches.Natural Language Processing (NLP) is a field of artificial intelligence and computational linguistics that focuses on enabling computers to understand, interpret, and generate human language.
-
-          </Card.Text>
-         
-        </Card.Body>
-      </Card>
-
-      <Card className="project-card shadow-sm hover-effect">
-        <Card.Img variant="top" src={projectimg2} alt={title} className="project-image" />
-        <Card.Body className='projectbody'>
-          <Card.Title className="project-title">Comprehensive Strategies for Detecting Malware on Websites</Card.Title>
-          <Card.Text className="project-description">
-          This content explores the latest approaches and tools for detecting malware in websites. It covers how malicious code can infiltrate websites, the risks it poses to users and businesses, and various techniques—such as behavior-based analysis, signature detection, and machine learning—that help identify and neutralize threats in real-time. Whether you're a developer or a website owner, understanding malware detection is key to safeguarding your digital presence.
-          </Card.Text>
-       
-        </Card.Body>
-      </Card>
-
-
-
-      <Card className="project-card shadow-sm hover-effect">
-        <Card.Img variant="top" src={projectimg} alt={title} className="project-image" />
-        <Card.Body className='projectbody'>
-          <Card.Title className="project-title">MULTILINGUAL SENTIMENT ANALYSIS FOR YOUTUBE EDUCATIONAL VIDEOS USING NLP AND MACHINE LEARNING APPROACH</Card.Title>
-          <Card.Text className="project-description">
-            This project presents a comprehensive study on sentiment analysis for YouTube educational videos...
-          </Card.Text>
-       
-        </Card.Body>
-      </Card>
+    <div className="container mt-5">
+      <h1 className="text-center my-heading bg-info rounded-3 mb-4">Projects</h1>
+      <Carousel>
+        {projects.map((project, index) => (
+          <Carousel.Item key={index}>
+            <div className="project-slide">
+              <img
+                className="d-block w-100 project-slide-image"
+                src={project.image}
+                alt={`Project ${index + 1}`}
+              />
+              <div className="carousel-caption">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+              </div>
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </div>
-    </>
   );
 }
 

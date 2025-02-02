@@ -27,7 +27,7 @@ function Contact() {
                 <i className="fas fa-envelope fa-3x mb-3 contact-icon"></i>
                 <h5 className="card-title">Email</h5>
                 <p className="card-text">
-                  <a href="mailto:prem0572003@example.com" className="text-decoration-none">prem@gmail.com</a>
+                  <a href="mailto:prem@gmail.com" className="text-decoration-none">prem@gmail.com</a>
                 </p>
               </div>
             </div>
@@ -40,7 +40,7 @@ function Contact() {
                 <i className="fab fa-github fa-3x mb-3 contact-icon"></i>
                 <h5 className="card-title">GitHub</h5>
                 <p className="card-text">
-                  <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-decoration-none">(Check it)</a>
+                  <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-decoration-none">Check it</a>
                 </p>
               </div>
             </div>
@@ -53,7 +53,7 @@ function Contact() {
                 <i className="fab fa-linkedin fa-3x mb-3 contact-icon"></i>
                 <h5 className="card-title">LinkedIn</h5>
                 <p className="card-text">
-                  <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-decoration-none">(Check it)</a>
+                  <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-decoration-none">Check it</a>
                 </p>
               </div>
             </div>
@@ -79,7 +79,7 @@ function Contact() {
                 <i className="fab fa-instagram fa-3x mb-3 contact-icon"></i>
                 <h5 className="card-title">Instagram</h5>
                 <p className="card-text">
-                  <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-decoration-none">(Check it)</a>
+                  <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-decoration-none">Check it</a>
                 </p>
               </div>
             </div>

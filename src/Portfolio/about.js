@@ -42,7 +42,7 @@ function About() {
                         </tr>
                         <tr>
                             <th className="bg-light">Date of Birth</th>
-                            <td>07-06-2003</td>
+                            <td>05-07-2003</td>
                         </tr>
                         <tr>
                             <th className="bg-light">Address</th>
@@ -83,7 +83,7 @@ function About() {
                         </tr>
                         <tr>
                             <th className="bg-light">CGPA</th>
-                            <td>8.26</td>
+                            <td>7.56</td>
                         </tr>
                     </tbody>
                 </table>

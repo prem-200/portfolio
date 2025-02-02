@@ -1,9 +1,12 @@
 import React from 'react';
 import profileImg from '../img.jpg'; // Ensure the path to your image is correct
+import { useRef } from 'react';
 import '../App.css';
 
 function Home() {
+  const homeRef = useRef(null);
   return (
+    <section id="home" ref={homeRef}>
     <div className="container-fluid mt-5">
       <header className="header d-flex flex-column flex-md-row align-items-center justify-content-between py-5 gradient-bg">
         <div className="text-container text-center text-md-start">
@@ -16,6 +19,7 @@ function Home() {
         <img src={profileImg} alt="Profile" className="profile-image img-fluid rounded-circle ms-4 mt-3 mt-md-0" />
       </header>
     </div>
+    </section>
   );
 }
 

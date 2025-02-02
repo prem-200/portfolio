@@ -6,7 +6,9 @@ import Contact from './Portfolio/contact';
 import Skill from './Portfolio/skill';
 import Footer from './Portfolio/footer';
 import Certificate from './Portfolio/Certificate';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectCard from './Portfolio/project';
+import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 
 function App() {
