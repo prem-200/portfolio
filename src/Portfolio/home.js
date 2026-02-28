@@ -10,9 +10,9 @@ function Home() {
     <div className="container-fluid mt-5">
       <header className="header d-flex flex-column flex-md-row align-items-center justify-content-between py-5 gradient-bg">
         <div className="text-container text-center text-md-start">
-          <h1 className="display-3 text-white">HELLO! THIS IS PREM</h1>
-          <p className="lead display-6 text-white">FULL-STACK Developer</p>
-          <a href="../prem.pdf" download="Prem.pdf" className="btn btn-light mb-3 mb-md-0">
+          <h1 className="display-3 text-white">HELLO! THIS IS PREM S</h1>
+          <p className="lead display-6 text-white">FRONT-END DEVELOPER</p>
+          <a href={`${process.env.PUBLIC_URL}/Prem_resume .pdf`} download="Prem_Resume.pdf" className="btn btn-light mb-3 mb-md-0">
             Download CV
           </a>
         </div>

@@ -18,10 +18,13 @@ function Navbar() {
             <Link className="nav-link hover-transform fs-5" to="about" smooth={true} duration={300}><span>A</span>bout</Link>
           </li>
           <li className="nav-item me-3">
-            <Link className="nav-link hover-transform fs-5" to="projects" smooth={true} duration={300}><span>P</span>rojects</Link>
+            <Link className="nav-link hover-transform fs-5" to="skills" smooth={true} duration={300}><span>S</span>kills</Link>
           </li>
           <li className="nav-item me-3">
-            <Link className="nav-link hover-transform fs-5" to="skills" smooth={true} duration={300}><span>S</span>kills</Link>
+            <Link className="nav-link hover-transform fs-5" to="experience" smooth={true} duration={300}><span>E</span>xperience</Link>
+          </li>
+          <li className="nav-item me-3">
+            <Link className="nav-link hover-transform fs-5" to="projects" smooth={true} duration={300}><span>P</span>rojects</Link>
           </li>
           <li className="nav-item me-3">
             <Link className="nav-link hover-transform fs-5" to="certificates" smooth={true} duration={300}><span>C</span>ertificates</Link>

@@ -6,6 +6,7 @@ import Contact from './Portfolio/contact';
 import Skill from './Portfolio/skill';
 import Footer from './Portfolio/footer';
 import Certificate from './Portfolio/Certificate';
+import Experience from './Portfolio/experience';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectCard from './Portfolio/project';
 import 'font-awesome/css/font-awesome.min.css';
@@ -26,6 +27,10 @@ function App() {
       
       <section id="skills">
         <Skill /> {/* Skills section */}
+      </section>
+      
+      <section id="experience">
+        <Experience /> {/* Experience section */}
       </section>
       
       <section id="projects">

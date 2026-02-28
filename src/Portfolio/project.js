@@ -2,21 +2,39 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import projectimg1 from '../project1.jpg';
 import projectimg2 from '../project2.jpg';
-import '../App.css'; // Import custom styles
+import '../App.css';
 
 function ProjectCard() {
   const projects = [
     {
       image: projectimg1,
-      title: 'Multilingual Sentiment Analysis for YouTube Educational Videos',
+      title: 'HRMS (Human Resource Management System)',
       description:
-        'This project presents a comprehensive study on sentiment analysis for YouTube educational videos, leveraging the power of Natural Language Processing (NLP) and Machine Learning approaches...',
+        'Developed a comprehensive HRMS to manage employee records, attendance, payroll, and leave processes, implementing role-based access and automated workflows to improve operational efficiency.',
     },
     {
       image: projectimg2,
-      title: 'Comprehensive Strategies for Detecting Malware on Websites',
+      title: 'Insurance Management System',
       description:
-        'This project explores the latest approaches and tools for detecting malware in websites. It covers various techniques to identify and neutralize threats in real-time...',
+        'Built a scalable Insurance Management System to optimize policy lifecycle management, claims processing, premium tracking, and automated renewals with structured user access control.',
+    },
+    {
+      image: projectimg1,
+      title: 'Business & Corporate Websites',
+      description:
+        'Designed and developed responsive static and dynamic business websites with modern UI/UX, SEO-friendly architecture, content management features, and performance optimization to enhance user engagement and strengthen digital presence.',
+    },
+    {
+      image: projectimg2,
+      title: 'SEISMIC TREMOR ALERT AND DOWNPOUR CAUTION',
+      description:
+        'The goal of this project is to identify seismic tremors and downpours so that we can issue real-time alert warnings when they may result in earthquakes and rain.',
+    },
+    {
+      image: projectimg1,
+      title: 'TRACKIT - Vehicle Tracking System',
+      description:
+        'An affordable vehicle tracking system for local area private buses using smartphone GPS. Tracks bus location based on time schedules without expensive GPS hardware.',
     },
   ];
 

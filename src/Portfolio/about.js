@@ -24,7 +24,7 @@ function About() {
 
             {/* Introductory Paragraph */}
             <p className="text-center" data-aos="fade-up" data-aos-delay="200">
-                Passionate about full-stack development with a solid foundation in front-end and back-end technologies. Skilled in HTML, CSS, MediaQuery, Bootstrap, JavaScript, and ReactJS. Eager to work as a team and create advanced web applications that push the boundaries of innovation.
+                A dynamic Computer Science graduate with a passion for coding and system design. Eager to excel in HTML, CSS, and JavaScript, while also proficient in Java, C, and Python. Ready to collaborate with diverse teams to innovate and deliver tailored solutions.
             </p>
 
             {/* Personal Information Table */}
@@ -38,7 +38,7 @@ function About() {
                     <tbody style={{ fontSize: '1.2rem' }}>
                         <tr>
                             <th className="bg-light">Name</th>
-                            <td>PREM</td>
+                            <td>PREM S</td>
                         </tr>
                         <tr>
                             <th className="bg-light">Date of Birth</th>
@@ -46,7 +46,7 @@ function About() {
                         </tr>
                         <tr>
                             <th className="bg-light">Address</th>
-                            <td>7/1, Muthampalyam, Villupuram, 605602</td>
+                            <td>No: 7/1, Muthampalayam, Villupuram, 605602</td>
                         </tr>
                         <tr>
                             <th className="bg-light">Email</th>
@@ -79,11 +79,11 @@ function About() {
                         </tr>
                         <tr>
                             <th className="bg-light">Expected Year of Passing</th>
-                            <td>2024</td>
+                            <td>Graduated in July 2024</td>
                         </tr>
                         <tr>
                             <th className="bg-light">CGPA</th>
-                            <td>7.56</td>
+                            <td>7.43</td>
                         </tr>
                     </tbody>
                 </table>

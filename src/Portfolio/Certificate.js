@@ -12,11 +12,11 @@ import cer5 from '../cer5.png';
 function Certificate() {
   const certificates = [
     { img: wirpo, title: 'Wipro TalentNext' },
-    { img: cer1, title: 'Cybersecurity Essentials' },
-    { img: cer2, title: 'SQL' },
-    { img: cer3, title: 'Introduction to Packet Tracer' },
-    { img: cer4, title: 'Introduction to Cybersecurity' },
-    { img: cer5, title: 'Introduction to Networks' },
+    { img: cer1, title: 'Python - Basics' },
+    { img: cer2, title: 'C Programming Course' },
+    { img: cer3, title: 'Java Basics' },
+    { img: cer4, title: 'Phoenix Research & IT Solutions - Java Application Development (July 2022 - August 2022)' },
+    { img: cer5, title: 'Cybersecurity Essentials' },
   ];
 
   return (
