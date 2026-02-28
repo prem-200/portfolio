@@ -1,24 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d6d3d47a.css",
-    "main.js": "/portfolio/static/js/main.75798b50.js",
+    "main.css": "/portfolio/static/css/main.efe25f8a.css",
+    "main.js": "/portfolio/static/js/main.2b8dea5c.js",
     "static/js/453.6d16bec0.chunk.js": "/portfolio/static/js/453.6d16bec0.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/wirpo.png": "/portfolio/static/media/wirpo.a115106ebf5bc6258fef.png",
     "static/media/cer1.png": "/portfolio/static/media/cer1.b0b7ef8a0bdfe327c0f0.png",
     "static/media/cer5.png": "/portfolio/static/media/cer5.e8154249945d7ab526e1.png",
     "static/media/cer4.png": "/portfolio/static/media/cer4.cd1fad17af3563f2a385.png",
     "static/media/cer3.png": "/portfolio/static/media/cer3.2286f19ede0403872217.png",
+    "static/media/fontawesome-webfont.eot": "/portfolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/project2.jpg": "/portfolio/static/media/project2.5d0d316064ea3d953ab5.jpg",
     "static/media/cer2.png": "/portfolio/static/media/cer2.a1ddec105e51a6f9be0c.png",
     "static/media/project1.jpg": "/portfolio/static/media/project1.0296c563d5ab6b8e9834.jpg",
     "static/media/img.jpg": "/portfolio/static/media/img.1c5968be00c6b66123f1.jpg",
     "index.html": "/portfolio/index.html",
-    "main.d6d3d47a.css.map": "/portfolio/static/css/main.d6d3d47a.css.map",
-    "main.75798b50.js.map": "/portfolio/static/js/main.75798b50.js.map",
+    "main.efe25f8a.css.map": "/portfolio/static/css/main.efe25f8a.css.map",
+    "main.2b8dea5c.js.map": "/portfolio/static/js/main.2b8dea5c.js.map",
     "453.6d16bec0.chunk.js.map": "/portfolio/static/js/453.6d16bec0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6d3d47a.css",
-    "static/js/main.75798b50.js"
+    "static/css/main.efe25f8a.css",
+    "static/js/main.2b8dea5c.js"
   ]
 }
