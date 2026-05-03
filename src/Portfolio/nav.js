@@ -13,18 +13,16 @@ const NAV_LINKS = [
 ];
 
 function Navbar() {
-  const [scrolled, setScrolled]   = useState(false);
-  const [menuOpen, setMenuOpen]   = useState(false);
-  const [active, setActive]       = useState('home');
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive]     = useState('home');
 
-  /* Scroll → glassmorphism */
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  /* Active section via IntersectionObserver */
   useEffect(() => {
     const ids = [...NAV_LINKS.map(l => l.to), 'contact'];
     const observers = ids.map(id => {
@@ -40,7 +38,6 @@ function Navbar() {
     return () => observers.forEach(o => o && o.disconnect());
   }, []);
 
-  /* Close drawer on resize to desktop */
   useEffect(() => {
     const onResize = () => { if (window.innerWidth > 992) setMenuOpen(false); };
     window.addEventListener('resize', onResize);
@@ -53,41 +50,29 @@ function Navbar() {
     <>
       <nav className={`pf-nav ${scrolled ? 'pf-nav--scrolled' : 'pf-nav--top'}`}>
 
-        {/* Brand */}
         <a href="#home" className="pf-nav__brand">
           <span className="pf-nav__brand-dot"></span>
           Prem<span style={{ fontWeight: 300, opacity: 0.7 }}>.dev</span>
         </a>
 
-        {/* Desktop links */}
         <ul className="pf-nav__links">
           {NAV_LINKS.map(({ label, to }) => (
             <li key={to}>
               <Link
                 className={`pf-nav__link ${active === to ? 'pf-nav__link--active' : ''}`}
-                to={to}
-                smooth={true}
-                duration={500}
-                offset={-70}
+                to={to} smooth duration={500} offset={-70}
               >
                 {label}
               </Link>
             </li>
           ))}
           <li>
-            <Link
-              className="pf-nav__link pf-nav__cta"
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-70}
-            >
+            <Link className="pf-nav__link pf-nav__cta" to="contact" smooth duration={500} offset={-70}>
               Hire Me
             </Link>
           </li>
         </ul>
 
-        {/* Hamburger */}
         <button
           className={`pf-nav__hamburger ${menuOpen ? 'pf-nav__hamburger--open' : ''}`}
           onClick={() => setMenuOpen(o => !o)}
@@ -99,16 +84,12 @@ function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Drawer */}
       <div className={`pf-nav__drawer ${menuOpen ? 'pf-nav__drawer--open' : ''}`}>
         {[...NAV_LINKS, { label: 'Contact', to: 'contact' }].map(({ label, to }) => (
           <Link
             key={to}
             className={`pf-nav__drawer-link ${active === to ? 'pf-nav__drawer-link--active' : ''}`}
-            to={to}
-            smooth={true}
-            duration={500}
-            offset={-70}
+            to={to} smooth duration={500} offset={-70}
             onClick={closeMenu}
           >
             <span className="pf-nav__drawer-dot"></span>

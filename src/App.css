@@ -1,6 +1,59 @@
 /* Import Poppins font if not using <link> in index.html */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* ===== CSS THEME VARIABLES ===== */
+:root {
+  --accent:  #047bfa;
+  --accent2: #00c6ff;
+
+  /* Light mode */
+  --bg:          #f1f5f9;
+  --bg-card:     #ffffff;
+  --bg-item:     #f8fafc;
+  --border:      #e2e8f0;
+  --border-hover:#93c5fd;
+  --text-head:   #0a0f2e;
+  --text-body:   #475569;
+  --text-muted:  #94a3b8;
+  --text-value:  #0f172a;
+  --tag-bg:      rgba(4,123,250,0.08);
+  --tag-border:  rgba(4,123,250,0.2);
+  --tag-color:   var(--accent);
+  --chip-bg:     #f1f5f9;
+  --chip-color:  #334155;
+  --icon-bg:     #eff6ff;
+  --icon-border: #bfdbfe;
+  --stat-bg:     #ffffff;
+  --stat-border: #e2e8f0;
+  --shadow-sm:   0 4px 20px rgba(0,0,0,0.06);
+  --shadow-md:   0 22px 50px rgba(0,0,0,0.08);
+  --shadow-lg:   0 28px 56px rgba(0,0,0,0.12);
+}
+
+[data-mode="dark"] {
+  --bg:          #0a0f2e;
+  --bg-card:     rgba(255,255,255,0.07);
+  --bg-item:     rgba(255,255,255,0.05);
+  --border:      rgba(255,255,255,0.12);
+  --border-hover:rgba(0,198,255,0.4);
+  --text-head:   #ffffff;
+  --text-body:   rgba(255,255,255,0.72);
+  --text-muted:  rgba(255,255,255,0.45);
+  --text-value:  #ffffff;
+  --tag-bg:      rgba(255,255,255,0.15);
+  --tag-border:  rgba(255,255,255,0.3);
+  --tag-color:   #ffffff;
+  --chip-bg:     rgba(255,255,255,0.08);
+  --chip-color:  rgba(255,255,255,0.82);
+  --icon-bg:     rgba(4,123,250,0.2);
+  --icon-border: rgba(0,198,255,0.25);
+  --stat-bg:     rgba(255,255,255,0.09);
+  --stat-border: rgba(255,255,255,0.16);
+  --shadow-sm:   0 4px 20px rgba(0,0,0,0.3);
+  --shadow-md:   0 22px 50px rgba(0,0,0,0.32);
+  --shadow-lg:   0 28px 56px rgba(0,0,0,0.4);
+}
+
 /* Set the default font family for the entire app */
 body {
     font-family: 'Poppins', sans-serif; /* Use Poppins font */
@@ -501,7 +554,7 @@ body {
   .home-title { font-size: 1.85rem; letter-spacing: -0.5px; }
   .home-role-wrap { font-size: 1rem; }
   .home-bio { font-size: 0.9rem; line-height: 1.7; }
-  .profile-img-wrap { width: 160px; height: 160px; }
+  .profile-img-wrap { width: 250px; height: 250px; }
   .home-btn-primary, .home-btn-outline { padding: 11px 22px; font-size: 0.85rem; }
   .home-stats { padding: 12px 10px; border-radius: 12px; }
   .stat-item { padding: 0 8px; }
@@ -647,53 +700,7 @@ p.lead {
   border-radius: 1rem; /* Rounded corners for the progress fill */
   background-color: #02c9fa; /* Progress bar color */
 }
-/* Contact Section Styles */
-#contact {
-    background-color: #f8f9fa; /* Light background for contrast */
-    border-radius: 10px; /* Optional: Add rounded corners */
-  }
-  
-  /* Card Styles */
-.contact-card {
-  border-radius: 1rem; /* Rounded corners for cards */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  background-color: white; /* Card background color */
-}
-
-.contact-card:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-  background-color: 3
-  #64ddfb; /* Change background color on hover */
-  color: white; /* Change text color to white on hover */
-}
-
-/* Card Title and Text Styling */
-.card-title {
-  font-weight: bold; /* Bold title */
-  color: #000000; /* Primary color */
-}
-
-.card-text a {
-  color: #000000; /* Link color */
-  text-decoration: none; /* Remove underline */
-}
-
-.card-text a:hover {
-  text-decoration: underline; /* Underline on hover */
-  color: #17c9f6; /* Darker blue on hover */
-}
-
-/* Icon Styling */
-.contact-icon {
-  color: #8f9499; /* Icon color */
-}
-
-/* Change icon color on hover */
-.contact-icon:hover {
-  color: white; /* Change icon color to white on hover */
-}
+/* Contact old styles removed - handled by contact.css */
 
   #certificates {
     background-color: #f8f9fa;
@@ -768,61 +775,7 @@ p.lead {
   font-weight: 600; /* Adjust font weight */
   color: #08090b; /* Set a consistent color */
 }
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
 
-.footer p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.contact-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.contact-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-icon {
-  color: #ff0022;
-}
-
-.contact-title {
-  font-size: 1.25rem;
-  color: #333;
-  margin-top: 10px;
-}
-
-.contact-text a {
-  color: #ff0088;
-  text-decoration: none;
-}
-
-.contact-text a:hover {
-  text-decoration: underline;
-}
-
-.contact-card i {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
 
 
   /* Responsive Design Adjustments */
@@ -1019,116 +972,7 @@ p.lead {
       font-size: 1.5rem; /* Smaller font size for headings */
   }
 }
-/* Default styles for larger screens */
-.contact-logo {
-  max-width: 150px;
-  height: auto;
-  margin-bottom: 20px;
-}
 
-.contact-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.contact-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-icon {
-  color: #007bff;
-  font-size: 3rem;
-}
-
-.contact-title {
-  font-size: 1.25rem;
-  color: #333;
-  margin-top: 10px;
-}
-
-.contact-text a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-text a:hover {
-  text-decoration: underline;
-}
-
-.contact-card i {
-  margin-bottom: 10px;
-}
-
-/* Media Queries for smaller devices */
-
-/* Tablet and below */
-@media (max-width: 768px) {
-  .contact-logo {
-    max-width: 120px;
-  }
-
-  .contact-card {
-    padding: 15px;
-  }
-
-  .contact-icon {
-    font-size: 2.5rem;
-  }
-
-  .contact-title {
-    font-size: 1.1rem;
-  }
-
-  /* Display icon and title in one line */
-  .contact-card {
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-  }
-
-  .contact-card i {
-    margin-right: 15px; /* Space between icon and text */
-  }
-}
-
-/* Mobile devices */
-@media (max-width: 480px) {
-  .contact-logo {
-    max-width: 100px;
-  }
-
-  .contact-card {
-    padding: 10px;
-  }
-
-  .contact-icon {
-    font-size: 2rem;
-  }
-
-  .contact-title {
-    font-size: 1rem;
-  }
-
-  /* Display icon and title in one line */
-  .contact-card {
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .contact-card i {
-    margin-right: 10px; /* Space between icon and text */
-  }
-}
 
 
 /* App.css */
@@ -1356,159 +1200,7 @@ p.lead {
   }
 }
 
-/* Contact Section Styling */
-.contact-section {
-  padding: 6rem 0;
-  background-color: #f8f9fa;
-}
-
-.my-heading {
-  font-size: 3rem;
-  font-weight: bold;
-  padding: 1rem;
-  background-color: #02c9fa; 
-  color: white;
-  text-transform: uppercase;
-  margin-bottom: 3rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Container for Contact Cards */
-.contact-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
-}
-
-/* Styling for each Contact Card */
-.contact-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-}
-
-.contact-icon {
-  font-size: 3rem;
-  color: #007bff;
-  margin-bottom: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.contact-icon:hover {
-  color: #0056b3;
-}
-
-h5 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-top: 1rem;
-}
-
-.contact-link {
-  font-size: 1.1rem;
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-  color: #0056b3;
-}
-
-p {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  color: #555;
-  text-align: center;
-  line-height: 1.5;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .my-heading {
-    font-size: 2.5rem;
-  }
-
-  .contact-cards {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-
-  .contact-card {
-    padding: 1.5rem;
-  }
-
-  .contact-icon {
-    font-size: 2.5rem;
-  }
-}
-/* Media Query for 564px device width */
-@media (max-width: 564px) {
-  .my-heading {
-    font-size: 1.8rem; /* Smaller heading size */
-    margin-bottom: 1.5rem; /* Reduced bottom margin */
-  }
-
-  /* Adjust the layout for the contact cards */
-  .contact-cards {
-    grid-template-columns: 1fr 1fr; /* Two columns layout */
-    gap: 1rem; /* Reduced gap between cards */
-  }
-
-  .contact-card {
-    padding: 1rem; /* Reduced padding inside cards */
-    font-size: 0.9rem; /* Slightly smaller text inside the card */
-  }
-
-  .contact-icon {
-    font-size: 2rem; /* Reduced icon size */
-  }
-
-  h5 {
-    font-size: 1.1rem; /* Smaller heading text in card */
-    margin-top: 0.5rem; /* Reduced space between icon and heading */
-  }
-
-  .contact-link {
-    font-size: 0.9rem; /* Smaller link text */
-  }
-
-  /* Adjust paragraph style for small screens */
-  p {
-    font-size: 0.8rem; /* Smaller font size for paragraph text */
-    margin-top: 0.2rem; /* Reduced margin */
-    text-align: center; /* Keep text centered */
-  }
-
-  /* Style for the links inside the paragraph */
-  .contact-card p a {
-    font-size: 0.9rem; /* Adjust link size */
-    color: #007bff; /* Link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease;
-  }
-
-  .contact-card p a:hover {
-    color: #0056b3; /* Darker blue on hover */
-  }
-
-  /* Add some responsiveness to the contact section */
-  .contact-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Align everything to the center */
-    justify-content: center;
-  }
-}
+/* Contact section old styles removed - handled by contact.css */
 
 /* Experience Section Styles */
 .experience-card {

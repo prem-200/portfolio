@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Portfolio/nav'; 
+import Navbar from './Portfolio/nav';
 import Home from './Portfolio/home';
 import About from './Portfolio/about';
 import Contact from './Portfolio/contact';
@@ -11,42 +11,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectCard from './Portfolio/project';
 import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
+import { ThemeProvider } from './ThemeContext';
+import SettingsPanel from './Portfolio/SettingsPanel';
 
 function App() {
   return (
-    <div>
-      <Navbar /> {/* Navbar with anchor links */}
-      
-      <section id="home">
-        <Home /> {/* Home section */}
-      </section>
-      
-      <section id="about">
-        <About /> {/* About section */}
-      </section>
-      
-      <section id="skills">
-        <Skill /> {/* Skills section */}
-      </section>
-      
-      <section id="experience">
-        <Experience /> {/* Experience section */}
-      </section>
-      
-      <section id="projects">
-        <ProjectCard /> {/* Projects section */}
-      </section>
-      
-      <section id="certificates">
-        <Certificate /> {/* Certificates section */}
-      </section>
-      
-      <section id="contact">
-        <Contact /> {/* Contact section */}
-      </section>
-      
-      <Footer /> {/* Footer */}
-    </div>
+    <ThemeProvider>
+      <div>
+        <Navbar />
+        <SettingsPanel />
+        <section id="home"><Home /></section>
+        <section id="about"><About /></section>
+        <section id="skills"><Skill /></section>
+        <section id="experience"><Experience /></section>
+        <section id="projects"><ProjectCard /></section>
+        <section id="certificates"><Certificate /></section>
+        <section id="contact"><Contact /></section>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
