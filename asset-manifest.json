@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8b7546d3.css",
-    "main.js": "/portfolio/static/js/main.98badf8b.js",
+    "main.css": "/portfolio/static/css/main.2eadcfeb.css",
+    "main.js": "/portfolio/static/js/main.0030d045.js",
     "static/js/453.6d16bec0.chunk.js": "/portfolio/static/js/453.6d16bec0.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/wirpo.png": "/portfolio/static/media/wirpo.a115106ebf5bc6258fef.png",
@@ -17,12 +17,12 @@
     "static/media/cer2.png": "/portfolio/static/media/cer2.a1ddec105e51a6f9be0c.png",
     "static/media/project1.jpg": "/portfolio/static/media/project1.0296c563d5ab6b8e9834.jpg",
     "index.html": "/portfolio/index.html",
-    "main.8b7546d3.css.map": "/portfolio/static/css/main.8b7546d3.css.map",
-    "main.98badf8b.js.map": "/portfolio/static/js/main.98badf8b.js.map",
+    "main.2eadcfeb.css.map": "/portfolio/static/css/main.2eadcfeb.css.map",
+    "main.0030d045.js.map": "/portfolio/static/js/main.0030d045.js.map",
     "453.6d16bec0.chunk.js.map": "/portfolio/static/js/453.6d16bec0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b7546d3.css",
-    "static/js/main.98badf8b.js"
+    "static/css/main.2eadcfeb.css",
+    "static/js/main.0030d045.js"
   ]
 }
